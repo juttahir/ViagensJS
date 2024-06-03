@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/Consulta.js" defer></script>
     <script src="./assets/js/CadastroDePassageiros.js" defer></script>
     <title>ViagensGS</title>
 </head>
+
 <body>
 
     <div class="d-flex flex-column align-items-center menu">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <p class="logo">LambdaLabs Viagens</p>
-                </a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="tabela.html">Viagens</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="artilheiros.html">Consulta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="assistencia.html">Cadastro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="goleiros.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <div class="d-flex align-items-center">
+    
+              <button class="mr-auto navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <a href="index.html" class="navbar-brand">
+                <p class="logo">LambdaLabs Viagens</p>
+              </a>
+              
             </div>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="tabela.html">Viagens</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Consulta.html">Consulta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="assistencia.html">Cadastro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="goleiros.html">Contato</a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
         </nav>
-    </div>
+      </div>
 
     <!-- modal cadastrar -->
-    <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -70,7 +92,7 @@
                             <div class="col-6">
                                 <label for="destino" class="col-form-label text-right">Destino</label>
                                 <input type="text" id="destino" class="form-control" required>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-6">
@@ -99,7 +121,8 @@
     </div>
 
     <!-- modal editar -->
-    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -128,7 +151,7 @@
                             <div class="col-6">
                                 <label for="destinoEdit" class="col-form-label text-right">Destino</label>
                                 <input type="text" id="destinoEdit" class="form-control" required>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-6">
@@ -155,38 +178,41 @@
             </div>
         </div>
     </div>
-      
+
 
     <div class="container">
-    
+
         <div class="row d-flex justify-content-center m-3">
             <div class="text-center">
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalCadastrar">Cadastrar</button>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                    data-target="#modalCadastrar">Cadastrar</button>
             </div>
         </div>
-        
 
-        <table id="example" class="table table-striped">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Sobrenome</th>
-              <th>Aviação</th>
-              <th>Origem</th>
-              <th>Destino</th>
-              <th>Nº Voo</th>
-              <th>Data Voo</th>
-              <th>Ação</th>
-            </tr>
-          </thead>
-          <tbody id="listaDePassageiros">            
-          </tbody>
-        </table>
+        <div class="table-responsive">
+            <table id="example" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Aviação</th>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                        <th>Nº Voo</th>
+                        <th>Data Voo</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="listaDePassageiros">
+                </tbody>
+            </table>
+        </div>
 
-      </div>
-   
-    <header>       
+    </div>
+
+    <header>
     </header>
 
 </body>
+
 </html>
