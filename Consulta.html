@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/Consulta.js" defer></script>
+    <script src="./assets/js/CadastroDePassageiros.js" defer></script>
+    <title>ViagensGS</title>
+</head>
+<body>
+
+    <div class="d-flex flex-column align-items-center menu">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <p class="logo">LambdaLabs Viagens</p>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="tabela.html">Viagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artilheiros.html">Consulta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="assistencia.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="goleiros.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- modal cadastrar -->
+    <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastre um novo Passageiro em um voo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="nome" class="col-form-label text-right form-label">Nome</label>
+                                <input type="text" id="nome" class="form-control" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="sobrenome" class="col-form-label text-right">Sobrenome</label>
+                                <input type="text" id="sobrenome" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="origem" class="col-form-label text-right">Origem</label>
+                                <input type="text" id="origem" class="form-control" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="destino" class="col-form-label text-right">Destino</label>
+                                <input type="text" id="destino" class="form-control" required>
+                            </div>                            
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="aviacao" class="col-form-label text-right">Aviação</label>
+                                <input type="text" id="aviacao" class="form-control" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="voo" class="col-form-label text-right">Nº do Voo</label>
+                                <input type="number" id="voo" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row d-flex justify-content-center">
+                            <div class="col-6">
+                                <label for="dataVoo" class="col-form-label text-right">Data do Voo</label>
+                                <input type="date" id="dataVoo" class="form-control" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    <button type="submit" id="botao-cadastrar" class="btn btn-success">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal editar -->
+    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastre um novo Passageiro em um voo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="nomeEdit" class="col-form-label text-right form-label">Nome</label>
+                                <input type="text" id="nomeEdit" class="form-control" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="sobrenomeEdit" class="col-form-label text-right">Sobrenome</label>
+                                <input type="text" id="sobrenomeEdit" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="origemEdit" class="col-form-label text-right">Origem</label>
+                                <input type="text" id="origemEdit" class="form-control" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="destinoEdit" class="col-form-label text-right">Destino</label>
+                                <input type="text" id="destinoEdit" class="form-control" required>
+                            </div>                            
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="aviacaoEdit" class="col-form-label text-right">Aviação</label>
+                                <input type="text" id="aviacaoEdit" class="form-control" required>
+                            </div>
+                            <div class="col-3">
+                                <label for="vooEdit" class="col-form-label text-right">Nº do Voo</label>
+                                <input type="number" id="vooEdit" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row d-flex justify-content-center">
+                            <div class="col-6">
+                                <label for="dataVooEdit" class="col-form-label text-right">Data do Voo</label>
+                                <input type="date" id="dataVooEdit" class="form-control" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    <button type="submit" id="salvarAlteracoes" class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+    <div class="container">
+    
+        <div class="row d-flex justify-content-center m-3">
+            <div class="text-center">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalCadastrar">Cadastrar</button>
+            </div>
+        </div>
+        
+
+        <table id="example" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Sobrenome</th>
+              <th>Aviação</th>
+              <th>Origem</th>
+              <th>Destino</th>
+              <th>Nº Voo</th>
+              <th>Data Voo</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="listaDePassageiros">            
+          </tbody>
+        </table>
+
+      </div>
+   
+    <header>       
+    </header>
+
+</body>
+</html>
