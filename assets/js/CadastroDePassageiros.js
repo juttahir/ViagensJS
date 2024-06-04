@@ -17,22 +17,22 @@ document
             id: uuidv4(),
             nome: form.nome.value,
             sobrenome: form.sobrenome.value,
-            aviacao: form.aviacao.value,
+            empresa: form.empresa.value,
             origem: form.origem.value,
             destino: form.destino.value,
-            voo: form.voo.value,
-            dataVoo: form.dataVoo.value
+            passeio: form.passeio.value,
+            dataPasseio: form.dataPasseio.value
         }
 
         console.log(form.nome.value)
 
         if(passageiro.nome && 
             passageiro.sobrenome &&
-            passageiro.aviacao &&
+            passageiro.empresa &&
             passageiro.origem &&
             passageiro.destino &&
-            passageiro.voo &&
-            passageiro.dataVoo
+            passageiro.passeio &&
+            passageiro.dataPasseio
         ){
             console.log("Funcionou")
             salvar(passageiro)

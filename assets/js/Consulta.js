@@ -7,11 +7,11 @@ function card(passageiro){
         const content = `
         <td>${passageiro.nome}</td>
         <td>${passageiro.sobrenome}</td>
-        <td>${passageiro.aviacao}</td>
+        <td>${passageiro.empresa}</td>
         <td>${passageiro.origem}</td>
         <td>${passageiro.destino}</td>
-        <td>${passageiro.voo}</td>
-        <td>${passageiro.dataVoo}</td>
+        <td>${passageiro.passeio}</td>
+        <td>${passageiro.dataPasseio}</td>
         <td>
             <button type="button" class="btn btn-primary btn-sm editar" data-id="${passageiro.id}">Editar</button>
             <button type="button" class="btn btn-danger btn-sm excluir" data-id="${passageiro.id}">Excluir</button>
@@ -39,9 +39,9 @@ document.querySelectorAll(".editar").forEach(button => {
             document.getElementById('sobrenomeEdit').value = passageiro.sobrenome;
             document.getElementById('destinoEdit').value = passageiro.destino;
             document.getElementById('origemEdit').value = passageiro.origem;
-            document.getElementById('aviacaoEdit').value = passageiro.aviacao;
-            document.getElementById('vooEdit').value = passageiro.voo;
-            document.getElementById('dataVooEdit').value = passageiro.dataVoo;
+            document.getElementById('empresaEdit').value = passageiro.empresa;
+            document.getElementById('passeioEdit').value = passageiro.passeio;
+            document.getElementById('dataPasseioEdit').value = passageiro.dataPasseio;
         });
       
         $('#modalEditar').modal('show');
@@ -53,9 +53,9 @@ document.querySelectorAll(".editar").forEach(button => {
             passageiro.sobrenome = $('#sobrenomeEdit').val();
             passageiro.destino = $('#destinoEdit').val();
             passageiro.origem = $('#origemEdit').val();
-            passageiro.aviacao = $('#aviacaoEdit').val();
-            passageiro.voo = $('#vooEdit').val();
-            passageiro.dataVoo = $('#dataVooEdit').val();
+            passageiro.empresa = $('#empresaEdit').val();
+            passageiro.passeio = $('#passeioEdit').val();
+            passageiro.dataPasseio = $('#dataPasseioEdit').val();
 
             let passageiros = JSON.parse(localStorage.getItem("passageiros")) || [];
 
