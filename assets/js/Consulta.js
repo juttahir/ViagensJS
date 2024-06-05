@@ -107,3 +107,17 @@ document.querySelectorAll(".excluir").forEach(button => {
         }
     });
 });
+
+$(document).ready(function(){
+    $('#searchInput').keyup(function(){
+        var searchText = $(this).val().toLowerCase();
+        $('#example tbody tr').each(function(){
+            var currentRowText = $(this).text().toLowerCase();
+            if(currentRowText.indexOf(searchText) !== -1){
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+});

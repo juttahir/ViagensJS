@@ -128,3 +128,9 @@ nav ul li a:hover {
     padding: 10px;
     background-color: rgba(42, 42, 42, 0.3);
 }
+
+#contato h1{
+    color: #cdcdcd;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+}
